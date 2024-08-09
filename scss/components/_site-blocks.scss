@@ -8,7 +8,7 @@
 	border-radius: 7px;
 	box-shadow: 0 15px 30px -15px rgba($black, .1);
 }
-.hero {
+.infinity {
 	position: relative;
 	background-size: cover;
 	background-position: cnter center;
@@ -89,7 +89,7 @@
 	}
 }
 
-.hero-slide {
+.infinity-slide {
 	top: 0;
 	position: absolute;
 	left: 0;
@@ -185,7 +185,7 @@
 }
 
 
-.hero-slider-wrap {
+.infinity-slider-wrap {
 	.tns-controls {
 		position: absolute;
 		z-index: 2;
@@ -527,7 +527,7 @@
 
 
 
-.hero-slider-wrap {
+.infinity-slider-wrap {
 	position: relative;
 	&:hover {
 		#hero-nav {
