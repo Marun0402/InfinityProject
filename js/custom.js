@@ -35,7 +35,7 @@
 
 	var tinySdlier = function() {
 
-		var heroSlider = document.querySelectorAll('.hero-slide');
+		var heroSlider = document.querySelectorAll('.infinity-slide');
 		var propertySlider = document.querySelectorAll('.property-slider');
 		var imgPropertySlider = document.querySelectorAll('.img-property-slide');
 		var testimonialSlider = document.querySelectorAll('.testimonial-slider');
@@ -43,7 +43,7 @@
 
 		if ( heroSlider.length > 0 ) {
 			var tnsHeroSlider = tns({
-				container: '.hero-slide',
+				container: '.infinity-slide',
 				mode: 'carousel',
 				speed: 700,
 				autoplay: true,

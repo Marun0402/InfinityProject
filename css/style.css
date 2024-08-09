@@ -6930,7 +6930,7 @@ textarea.form-control-lg {
 
 .bg-light {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important; }
+  background-color: #f1f6fa !important; }
 
 .bg-dark {
   --bs-bg-opacity: 1;
@@ -9649,15 +9649,15 @@ textarea {
   border-radius: 10px;
   }
 
-.hero {
+.infinity {
   position: relative;
   background-size: cover;
   background-position: cnter center;
   background-repeat: no-repeat;
   background-color: #00204a; }
-  .hero.overlay {
+  .infinity.overlay {
     position: relative; }
-    .hero.overlay:before {
+    .infinity.overlay:before {
       background-color: rgba(0, 0, 0, 0.5);
       content: "";
       position: absolute;
@@ -9666,48 +9666,64 @@ textarea {
       bottom: 0;
       top: 0;
       z-index: 1; }
-  .hero, .hero > .container > .row {
+  .infinity, .infinity > .container > .row {
     height: 100vh;
     min-height: 600px; }
-  .hero.page-inner, .hero.page-inner > .container > .row {
+  .infinity.page-inner, .infinity.page-inner > .container > .row {
     height: 70vh;
     min-height: 300px; }
-  .hero > .container {
+  .infinity > .container {
     position: relative;
     z-index: 2; }
-  .hero .heading {
+  .infinity .heading {
     color: #fff;
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     margin-bottom: 30px;
     font-weight: 600; }
-  .hero .lead {
+  .infinity .lead {
     color: #fff;
     font-size: 14px;
     margin-bottom: 30px; }
  .site_logo {
-  background: #271818;
+  background: #e6d1d1;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    opacity: 0.8;
+    opacity: 0.9;
  } 
+
+.site_logo {
+  animation: bounce-in 6s ease infinite;
+}
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% { transform: scale(.9); }
+  100% { transform: scale(1); }
+}
  .serviceRow {
   justify-content: center;
  }
-.hero-slide {
+.infinity-slide {
   top: 0;
   position: absolute;
   left: 0;
   right: 0; }
-  .hero-slide .img {
+  .infinity-slide .img {
     height: 100vh;
     min-height: 600px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; }
-    .hero-slide .img.overlay {
+    .infinity-slide .img.overlay {
       position: relative; }
-      .hero-slide .img.overlay:before {
+      .infinity-slide .img.overlay:before {
         content: "";
         position: absolute;
         left: 0;
@@ -9773,14 +9789,14 @@ textarea {
     -webkit-box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
     box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1); }
 
-.hero-slider-wrap .tns-controls {
+.infinity-slider-wrap .tns-controls {
   position: absolute;
   z-index: 2; }
-  .hero-slider-wrap .tns-controls button {
+  .infinity-slider-wrap .tns-controls button {
     background: none;
     border: none; }
 
-.hero-slider-wrap .tns-nav {
+.infinity-slider-wrap .tns-nav {
   position: absolute;
   right: 20px;
   top: 50%;
@@ -9788,15 +9804,15 @@ textarea {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 2; }
-  .hero-slider-wrap .tns-nav button {
+  .infinity-slider-wrap .tns-nav button {
     background: none;
     border: none;
     display: block;
     margin: 2px;
     height: 15px; }
-    .hero-slider-wrap .tns-nav button:active, .hero-slider-wrap .tns-nav button:focus {
+    .infinity-slider-wrap .tns-nav button:active, .infinity-slider-wrap .tns-nav button:focus {
       outline: none; }
-    .hero-slider-wrap .tns-nav button:before {
+    .infinity-slider-wrap .tns-nav button:before {
       position: absolute;
       content: "";
       width: 15px;
@@ -9806,7 +9822,7 @@ textarea {
       -webkit-transition: .3s all ease;
       -o-transition: .3s all ease;
       transition: .3s all ease; }
-    .hero-slider-wrap .tns-nav button.tns-nav-active:before {
+    .infinity-slider-wrap .tns-nav button.tns-nav-active:before {
       background-color: #fff;
       width: 35px; }
 
@@ -9859,7 +9875,12 @@ textarea {
 .property-item .img {
   position: relative;
   z-index: 1; }
-
+  .property-item .img img {
+    height: 400px;
+    width: 400px;
+    object-fit: fill;
+    border-radius: 10px;
+  }
 .property-item .property-content {
   background: #fff;
   padding: 30px;
@@ -9926,8 +9947,9 @@ textarea {
     background-size: cover;
     background-position: center center; }
     .section-4 .img-about img {
-      -o-object-fit: cover;
-      object-fit: cover; }
+      -o-object-fit: fill;
+      object-fit: fill; 
+    height: 500px;}
 
 .feature-h {
   margin-bottom: 30px; }
@@ -10039,7 +10061,8 @@ textarea {
   border-radius: 4px; }
   .person img {
     position: relative;
-    width: 90px;
+    width: 150px;
+    height: 200px;
     border-radius: 50%;
     margin: -45px auto 0 auto; }
   .person .person-contents {
@@ -10053,11 +10076,11 @@ textarea {
       font-size: 14px; }
 
 .meta {
-  color: #888; }
+  color: #000; }
 
-.hero-slider-wrap {
+.infinity-slider-wrap {
   position: relative; }
-  .hero-slider-wrap:hover #hero-nav {
+  .infinity-slider-wrap:hover #hero-nav {
     opacity: 1;
     visibility: visible; }
 
@@ -10124,7 +10147,7 @@ textarea {
   position: relative;
   z-index: 8;
   text-align: center;
-  background-color: rgba(0, 32, 74, 0.05); }
+  background-color: #f1f6fa}
 
 .box-feature {
   background: #fff;
@@ -10295,12 +10318,12 @@ nav[aria-label="breadcrumb"] li:before {
   font-size: 14px; }
 
 .infinity-footer {
-  background: #efefef;
+  background: #d8eafa;
   font-size: 14px;
-  color: #888;
-  padding: 70px 0; }
+  color: #000;
+  padding: 30px 0; }
   .infinity-footer a {
-    color: #777;
+    color: #545454;
     position: relative;
     display: inline-block;
     text-decoration: underline; }
@@ -10334,7 +10357,7 @@ nav[aria-label="breadcrumb"] li:before {
       width: 40px;
       height: 40px;
       position: relative;
-      background: #ccc;
+      background: #89c2f8;
       border-radius: 40%; }
       .infinity-footer .social li a:before {
         display: none; }
@@ -10348,6 +10371,9 @@ nav[aria-label="breadcrumb"] li:before {
       .infinity-footer .social li a:hover {
         background: #00204a;
         color: #fff; }
+        .ser-bgColor {
+          background-color: #4e89c4;
+        }
         @media (min-width: 350px) and (max-width: 767px) {
          .site_logo {
           width: 100%;
